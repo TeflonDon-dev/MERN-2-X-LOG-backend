@@ -16,11 +16,11 @@ app.use(express.json({ limit: "10mb" }));
 
 app.use(cors());
 
-app.use("/login", login);
+app.use("/api/login", login);
 
-app.use("/signup", signup);
+app.use("/api/signup", signup);
 
-app.use("/subscription", subscription);
+app.use("/api/subscription", subscription);
 
 app.post("/uploadproduct", async (req, res) => {
     const data = productModel(req.body);
